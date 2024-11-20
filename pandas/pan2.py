@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = pd.read_csv(r'C:\Users\Вержбицкая Полина\Downloads\flights.csv')
+data = pd.read_csv('flights.csv')
 summary = data.groupby('CARGO').agg(
     flights_count=('CARGO', 'size'),
     total_price=('PRICE', 'sum'),
